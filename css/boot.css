@@ -1,0 +1,95 @@
+/* ===================================================================
+   Vitows98 — Boot Screen CSS
+   =================================================================== */
+
+#boot-screen {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  color: #aaa;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  padding: 24px 32px;
+  z-index: 99998;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  overflow: hidden;
+}
+
+#boot-screen.hidden {
+  display: none;
+}
+
+.boot-bios-header {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+.boot-bios-header .bios-title {
+  font-size: 18px;
+  color: #c0c0c0;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+.boot-bios-header .bios-sub {
+  color: #888;
+  font-size: 11px;
+}
+
+.boot-line {
+  display: flex;
+  gap: 8px;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+.boot-line.visible { opacity: 1; }
+
+.boot-label { color: #aaa; }
+.boot-dots  { color: #666; letter-spacing: 1px; }
+.boot-ok    { color: #00cc00; font-weight: bold; }
+.boot-warn  { color: #ffcc00; }
+
+.boot-progress-bar {
+  margin-top: 20px;
+  height: 14px;
+  width: 320px;
+  border: 1px solid #444;
+  background: #111;
+  position: relative;
+  overflow: hidden;
+}
+.boot-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #000080 0%, #1084d0 100%);
+  width: 0%;
+  transition: width 0.25s linear;
+}
+
+.boot-loading-msg {
+  margin-top: 8px;
+  color: #888;
+  font-size: 11px;
+  min-height: 16px;
+}
+
+.boot-cursor {
+  display: inline-block;
+  width: 8px; height: 14px;
+  background: #aaa;
+  vertical-align: middle;
+  margin-left: 2px;
+  animation: blink 0.8s step-end infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .boot-line { opacity: 1 !important; transition: none; }
+  .boot-progress-fill { transition: none; }
+  .boot-cursor { animation: none; }
+}

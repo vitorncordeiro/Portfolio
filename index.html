@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vitows98 — Portfólio</title>
+  <meta name="description" content="Vitows98 — Portfólio de Vitor Natal Cordeiro. Desenvolvedor Back-end Java | Spring Boot.">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/vitows98.css">
+  <link rel="stylesheet" href="css/boot.css">
+  <link rel="stylesheet" href="css/crt.css">
+
+  <style>
+    /* Prevent FOUC */
+    #desktop { opacity: 0; transition: opacity 0.3s; }
+    #desktop.visible { opacity: 1; }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════
+       BOOT SCREEN
+  ════════════════════════════════════════════════════ -->
+  <div id="boot-screen" role="status" aria-live="polite" aria-label="Inicializando Vitows98"></div>
+
+  <!-- ═══════════════════════════════════════════════════
+       CRT OVERLAY
+  ════════════════════════════════════════════════════ -->
+  <div id="crt-overlay" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════════════
+       DESKTOP
+  ════════════════════════════════════════════════════ -->
+  <div id="desktop" role="main" aria-label="Vitows98 Desktop">
+    <!-- Icons are injected by desktop.js -->
+    <div id="icon-area" role="list" aria-label="Ícones da área de trabalho"></div>
+    <!-- Windows are injected by windows.js -->
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+       TASKBAR
+  ════════════════════════════════════════════════════ -->
+  <div id="taskbar" role="toolbar" aria-label="Barra de tarefas">
+    <button id="start-btn" aria-haspopup="menu" aria-controls="start-menu" aria-label="Iniciar menu">
+      <span class="start-logo" aria-hidden="true">🪟</span>
+      <span>Iniciar</span>
+    </button>
+
+    <div class="taskbar-sep" aria-hidden="true"></div>
+
+    <div id="taskbar-windows" role="group" aria-label="Janelas abertas"></div>
+
+    <div id="taskbar-tray" role="complementary" aria-label="Relógio">
+      <span id="clock" aria-live="off">00:00</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+       START MENU
+  ════════════════════════════════════════════════════ -->
+  <nav id="start-menu" role="menu" aria-label="Menu Iniciar"></nav>
+
+  <!-- ═══════════════════════════════════════════════════
+       OVERLAY (dialogs)
+  ════════════════════════════════════════════════════ -->
+  <div id="overlay" role="presentation"></div>
+
+  <!-- ═══════════════════════════════════════════════════
+       SHUTDOWN SCREEN
+  ════════════════════════════════════════════════════ -->
+  <div id="shutdown-screen" role="alertdialog" aria-modal="true" aria-label="Sistema desligado">
+    <div class="shutdown-msg">
+      <div style="font-size:32px;margin-bottom:16px;">🖥️</div>
+      <div style="font-size:18px;margin-bottom:8px;">É agora seguro desligar o computador.</div>
+      <div style="font-size:13px;color:#888;margin-bottom:24px;">Vitows98 — Obrigado pela visita!</div>
+      <button id="restart-btn" class="win-btn" style="background:#1a1a1a;color:#fff;border-color:#555 #111 #111 #555;">
+        🔄 Reiniciar Vitows98
+      </button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+       SCRIPTS (ordem importa)
+  ════════════════════════════════════════════════════ -->
+  <script src="js/data.js"></script>
+  <script src="js/boot.js"></script>
+  <script src="js/taskbar.js"></script>
+  <script src="js/windows.js"></script>
+  <script src="js/apps.js"></script>
+  <script src="js/desktop.js"></script>
+  <script src="js/wallpaper.js"></script>
+  <script src="js/crt.js"></script>
+  <script src="js/startmenu.js"></script>
+  <script src="js/shutdown.js"></script>
+
+  <!-- ═══════════════════════════════════════════════════
+       MAIN INIT
+  ════════════════════════════════════════════════════ -->
+  <script>
+    (function () {
+      // Init CRT first (reads localStorage before boot)
+      CRT.init();
+
+      // Boot sequence → then show desktop
+      Boot.run(function onBootComplete() {
+        // Apply wallpaper
+        Wallpaper.load();
+
+        // Init taskbar clock
+        Taskbar.init();
+
+        // Build desktop icons
+        Desktop.init();
+
+        // Init start menu
+        StartMenu.init();
+
+        // Init shutdown
+        Shutdown.init();
+
+        // Show desktop
+        const desktop = document.getElementById('desktop');
+        desktop.classList.add('visible');
+      });
+    })();
+  </script>
+
+</body>
+</html>
+
