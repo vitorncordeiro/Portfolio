@@ -19,11 +19,11 @@ const Shutdown = (() => {
     showOverlay(`
       <div class="dialog" role="alertdialog" aria-modal="true" aria-labelledby="dlg-title">
         <div class="win-titlebar">
-          <span class="win-title-icon">⏻</span>
+          <span class="win-title-icon"><img src="./assets/icons/My Computer.ico" style="width: 16px; height: 16px;"></span>
           <span class="win-title-text" id="dlg-title">Desligar o Vitows98</span>
         </div>
         <div class="dialog-body">
-          <div class="dialog-icon">🖥️</div>
+          <div class="dialog-icon"><img src="./assets/icons/My Computer.ico" style="width: 32px; height: 32px;"></div>
           <div class="dialog-msg">Deseja realmente desligar o <strong>Vitows98</strong>?</div>
         </div>
         <div class="dialog-footer">

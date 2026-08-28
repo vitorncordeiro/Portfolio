@@ -15,7 +15,7 @@ const StartMenu = (() => {
 
         <!-- Programas -->
         <div class="start-item" tabindex="0" role="menuitem" aria-haspopup="true">
-          <span class="start-item-icon">📁</span>
+          <span class="start-item-icon"><img src="./assets/icons/Folder Closed.ico"></span>
           <span>Programas</span>
           <span class="start-item-arrow">▶</span>
           <div class="start-submenu" role="menu">
@@ -30,16 +30,16 @@ const StartMenu = (() => {
 
         <!-- Documentos -->
         <div class="start-item" tabindex="0" role="menuitem" aria-haspopup="true">
-          <span class="start-item-icon">📄</span>
+          <span class="start-item-icon"><img src="./assets/icons/File.ico"></span>
           <span>Documentos</span>
           <span class="start-item-arrow">▶</span>
           <div class="start-submenu" role="menu">
             <div class="start-item" tabindex="0" role="menuitem" data-open="about">
-              <span class="start-item-icon">👤</span>
+              <span class="start-item-icon"><img src="./assets/icons/My Profile Folder.ico"></span>
               <span>Sobre Mim.txt</span>
             </div>
             <div class="start-item" tabindex="0" role="menuitem" data-open="resume">
-              <span class="start-item-icon">📑</span>
+              <span class="start-item-icon"><img src="./assets/icons/List File.ico"></span>
               <span>Currículo.pdf</span>
             </div>
           </div>
@@ -47,16 +47,16 @@ const StartMenu = (() => {
 
         <!-- Configurações -->
         <div class="start-item" tabindex="0" role="menuitem" aria-haspopup="true">
-          <span class="start-item-icon">⚙️</span>
+          <span class="start-item-icon"><img src="./assets/icons/System Properties.ico"></span>
           <span>Configurações</span>
           <span class="start-item-arrow">▶</span>
           <div class="start-submenu" role="menu">
             <div class="start-item" tabindex="0" role="menuitem" id="menu-wallpaper">
-              <span class="start-item-icon">🖼️</span>
+              <span class="start-item-icon"><img src="./assets/icons/Display.ico"></span>
               <span>Wallpaper</span>
             </div>
             <div class="start-item" tabindex="0" role="menuitem" id="menu-crt">
-              <span class="start-item-icon">📺</span>
+              <span class="start-item-icon"><img src="./assets/icons/Monitor.ico"></span>
               <span id="crt-menu-label">Efeito CRT: ${CRT.isOn() ? 'Ligado' : 'Desligado'}</span>
             </div>
           </div>
@@ -66,7 +66,7 @@ const StartMenu = (() => {
 
         <!-- Contato -->
         <div class="start-item" tabindex="0" role="menuitem" data-open="contact">
-          <span class="start-item-icon">📧</span>
+          <span class="start-item-icon"><img src="./assets/icons/User Support.ico"></span>
           <span>Contato</span>
         </div>
 
@@ -74,7 +74,7 @@ const StartMenu = (() => {
 
         <!-- Desligar -->
         <div class="start-item" tabindex="0" role="menuitem" id="menu-shutdown">
-          <span class="start-item-icon">⏻</span>
+          <span class="start-item-icon"><img src="./assets/icons/User's Computer.ico"></span>
           <span>Desligar...</span>
         </div>
 

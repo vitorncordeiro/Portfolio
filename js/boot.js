@@ -6,7 +6,7 @@ const Boot = (() => {
 
   const LINES = [
     { label: 'VITOWS98 BIOS v1.0', dots: '', status: '', color: 'bios-title' },
-    { label: '(C) 1998-2026 Vitor Natal Cordeiro', dots: '', status: '', color: 'bios-sub' },
+    { label: '(C) 2007-2026 Vitor Natal Cordeiro', dots: '', status: '', color: 'bios-sub' },
     null, // blank
     { label: 'Verificando memória', dots: '........', status: 'OK' },
     { label: 'Detectando dispositivos', dots: '.....', status: 'OK' },
@@ -62,9 +62,9 @@ const Boot = (() => {
     div.className = 'boot-line';
 
     if (lineData.color === 'bios-title') {
-      div.innerHTML = `<span class="boot-bios-title" style="color:#c0c0c0;font-size:16px;font-weight:bold;letter-spacing:2px;">${lineData.label}</span>`;
+      div.innerHTML = `<span class="boot-bios-title" style="color:#c0c0c0;font-size: 19px;font-weight:bold;letter-spacing:2px;">${lineData.label}</span>`;
     } else if (lineData.color === 'bios-sub') {
-      div.innerHTML = `<span style="color:#666;font-size:11px;">${lineData.label}</span>`;
+      div.innerHTML = `<span style="color:#666;font-size: 13px;">${lineData.label}</span>`;
     } else {
       const dots = lineData.dots ? `<span class="boot-dots">${lineData.dots}</span>` : '';
       const status = lineData.status

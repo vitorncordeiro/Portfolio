@@ -38,7 +38,7 @@ const Wallpaper = (() => {
     return `
       <div class="content-section">
         <h3>Plano de Fundo</h3>
-        <p style="font-size:11px;margin-bottom:8px;">Selecione um wallpaper para a área de trabalho:</p>
+        <p style="font-size: 13px;margin-bottom:8px;">Selecione um wallpaper para a área de trabalho:</p>
         <div class="wallpaper-grid">${thumbs}</div>
       </div>
       <div style="text-align:right;margin-top:8px;">
@@ -48,8 +48,8 @@ const Wallpaper = (() => {
   }
 
   function openChooser() {
-    WindowManager.open('wallpaper', 'Propriedades da Área de Trabalho', '🖼️', buildChooserContent(), {
-      width: 320, height: 340
+    WindowManager.open('wallpaper', 'Propriedades da Área de Trabalho', '<img src="./assets/icons/Display.ico" style="width: 32px; height: 32px;">', buildChooserContent(), {
+      width: 320, height: 420
     });
 
     // Events

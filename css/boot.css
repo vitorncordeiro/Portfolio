@@ -8,7 +8,7 @@
   background: #000;
   color: #aaa;
   font-family: "Courier New", Courier, monospace;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.6;
   padding: 24px 32px;
   z-index: 99998;
@@ -25,10 +25,10 @@
 .boot-bios-header {
   color: #fff;
   margin-bottom: 20px;
-  font-size: 14px;
+  font-size: 17px;
 }
 .boot-bios-header .bios-title {
-  font-size: 18px;
+  font-size: 22px;
   color: #c0c0c0;
   font-weight: bold;
   letter-spacing: 2px;
@@ -36,7 +36,7 @@
 }
 .boot-bios-header .bios-sub {
   color: #888;
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .boot-line {
@@ -71,7 +71,7 @@
 .boot-loading-msg {
   margin-top: 8px;
   color: #888;
-  font-size: 11px;
+  font-size: 13px;
   min-height: 16px;
 }
 

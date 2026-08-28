@@ -66,7 +66,9 @@ const DATA = {
     { name: "Deserto",           file: "assets/wallpapers/desert.jpeg" },
     { name: "Paisagem",          file: "assets/wallpapers/landscape.jpg" },
     { name: "Paisagem Noturna",  file: "assets/wallpapers/landscape-nigh.jpg" },
-    { name: "Céu",               file: "assets/wallpapers/sky.jpg" }
+    { name: "Linux & Windows",               file: "assets/wallpapers/linuxandwindows.jpg" },
+    { name: "Céu",               file: "assets/wallpapers/sky.jpg" },
+    { name: "Linux Kill Windows", file: "assets/wallpapers/linuxkillwindows.jpeg" }
   ],
 
   // ─── Projetos ─────────────────────────────────────────────────────────────
@@ -75,7 +77,7 @@ const DATA = {
       id: "sterna",
       name: "Sterna",
       exe: "Sterna.exe",
-      icon: "🌐",
+      icon: '<img src="./assets/icons/Earth (fixed).ico" style="width: 32px; height: 32px;">',
       github: "https://github.com/vitorncordeiro/Sterna",
       demoUrl: null, // preencher quando disponível
       description: "Sistema de consulta e recomendação de domínios com múltiplas fontes de dados e sugestões via IA.",
@@ -98,7 +100,7 @@ const DATA = {
       id: "dragons",
       name: "Dragons Inquiry",
       exe: "Dragons Inquiry.exe",
-      icon: "🐉",
+      icon: '<img src="./assets/icons/Minesweeper.ico" style="width: 32px; height: 32px;">',
       github: null, // preencher quando disponível
       demoUrl: null,
       description: "Jogo de aventura em CLI desenvolvido em Java puro, com narrativa inspirada em jornadas épicas.",
@@ -122,7 +124,7 @@ const DATA = {
       id: "pidgeymail",
       name: "PidgeyMail",
       exe: "PidgeyMail.exe",
-      icon: "📨",
+      icon: '<img src="./assets/icons/Internet Properties.ico" style="width: 32px; height: 32px;">',
       github: "https://github.com/vitorncordeiro/Pidgeymail",
       demoUrl: null,
       description: "Sistema distribuído de cadastro de usuários com microsserviços independentes comunicando-se via mensageria assíncrona.",
@@ -150,7 +152,7 @@ const DATA = {
       id: "aladin",
       name: "Aladin",
       exe: "Aladin.exe",
-      icon: "🪔",
+      icon: '<img src="./assets/icons/Phone.ico" style="width: 32px; height: 32px;">',
       github: null, // preencher quando disponível
       demoUrl: null,
       description: "ESP32 como servidor HTTP com interface web e interpretação de comandos por voz via LLM para controle de dispositivos.",
@@ -175,7 +177,7 @@ const DATA = {
       id: "jitor",
       name: "Jitor",
       exe: "Jitor.exe",
-      icon: "⚙️",
+      icon: '<img src="./assets/icons/Manage your Server.ico" style="width: 32px; height: 32px;">',
       github: "https://github.com/vitorncordeiro/Jitor",
       demoUrl: null,
       description: "Servidor HTTP implementado do zero em Java puro, sem frameworks, explorando fundamentos de redes e concorrência.",
