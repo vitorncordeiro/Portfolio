@@ -263,6 +263,17 @@ const Apps = (() => {
         </video>
       </div>
 
+      <div class="content-section">
+        <h3>Apresentação do projeto</h3>
+        <p>A convite do professor Fábio Garcez Bettio, apresentamos nossa ideia na 6ª Feira Maker, promovida pelo espaço CMaker</p>
+        <img src="./assets/screenshots/aladin-feira.jpg" style="width: 100%">
+      </div>
+
+      <div class="content-section">
+        <h3>Equipe</h3>
+        <p>Esse projeto foi desenvolvido para a matéria de Conectividade em Sistemas Ciberfísicos, junto de Gustavo Giacoia Kumagai e Eduardo Blasczak</p>
+      </div>
+
      
 
       <div class="content-section">
