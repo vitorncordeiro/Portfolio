@@ -255,7 +255,12 @@ const Apps = (() => {
 
       <div class="content-section">
         <h3>Demonstração</h3>
-        ${videoBox(p.videoUrl, 'Demonstração do Aladin')}
+        <video autoplay loop controls width="800">
+          <source 
+           src="./assets/videos/aladin.mp4"
+           type="video/mp4"
+          Seu navegador não suporta vídeo WebM.
+        </video>
       </div>
 
      
