@@ -13,20 +13,7 @@ const StartMenu = (() => {
       </div>
       <div class="start-items">
 
-        <!-- Programas -->
-        <div class="start-item" tabindex="0" role="menuitem" aria-haspopup="true">
-          <span class="start-item-icon"><img src="./assets/icons/Folder Closed.ico"></span>
-          <span>Programas</span>
-          <span class="start-item-arrow">▶</span>
-          <div class="start-submenu" role="menu">
-            ${DATA.projects.map(p => `
-              <div class="start-item" tabindex="0" role="menuitem" data-open="${p.id}">
-                <span class="start-item-icon">${p.icon}</span>
-                <span>${p.exe}</span>
-              </div>
-            `).join('')}
-          </div>
-        </div>
+        
 
         <!-- Documentos -->
         <div class="start-item" tabindex="0" role="menuitem" aria-haspopup="true">

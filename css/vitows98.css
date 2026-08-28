@@ -87,10 +87,14 @@ html, body {
 /* ─── Desktop Icons ─────────────────────────────────────────────── */
 #icon-area {
   position: absolute;
-  top: 8px; left: 8px;
+  top: 8px;
+  left: 8px;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
   gap: 6px;
+  height: 900px;
   z-index: 1;
 }
 

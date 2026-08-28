@@ -8,6 +8,7 @@ const Desktop = (() => {
     { id: 'about',      icon: '<img src="./assets/icons/My Profile Folder.ico" style="width: 50px; height: 50px;">', label: 'Sobre Mim.txt' },
     { id: 'sterna',     icon: '<img src="./assets/icons/Earth (fixed).ico" style="width: 50px; height: 50px;">', label: 'Sterna.exe' },
     { id: 'dragons',    icon: '<img src="./assets/icons/Minesweeper.ico" style="width: 50px; height: 50px;">', label: 'Dragons Inquiry.exe' },
+    { id: 'javagif',    icon: '<img src="./assets/icons/Java.ico" style="width: 50px; height: 50px;">', label: 'Java.exe' },
     { id: 'aladin',     icon: '<img src="./assets/icons/Phone.ico" style="width: 50px; height: 50px;">', label: 'Aladin.exe' },
     { id: 'resume',     icon: '<img src="./assets/icons/List File.ico" style="width: 50px; height: 50px;">', label: 'Currículo.pdf' },
     { id: 'pidgeymail', icon: '<img src="./assets/icons/Internet Properties.ico" style="width: 50px; height: 50px;">', label: 'PidgeyMail.exe' },
@@ -40,6 +41,15 @@ const APP_CONFIG = {
     width: 540,
     height: 540,
     status: 'Consulta de domínios'
+  },
+
+  javagif: {
+    title: 'Java.exe',
+    icon: '<img src="./assets/icons/Java.ico" style="width: 32px; height: 32px;">',
+    content: () => Apps.buildJavaGif(),
+    width: 540,
+    height: 540,
+    status: 'Java'
   },
 
   dragons: {

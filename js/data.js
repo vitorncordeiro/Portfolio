@@ -80,7 +80,7 @@ const DATA = {
       github: "https://github.com/vitorncordeiro/Sterna",
       demoUrl: null, // preencher quando disponível
       description: "Sistema de consulta e recomendação de domínios com múltiplas fontes de dados e sugestões via IA.",
-      problem: "Encontrar um domínio disponível é difícil: buscas tradicionais são lentas e não sugerem alternativas inteligentes.",
+      problem: "Encontrar um domínio disponível é difícil: buscas tradicionais sugerem alternativas inteligentes além de outras extensões.",
       solution: "Sterna agrega WHOIS, RDAP e ICANN Zone Files para consultas rápidas e usa LLM para sugerir domínios semelhantes disponíveis.",
       stack: ["Java 21", "Spring Boot", "Spring Security", "OAuth2", "Redis", "MongoDB", "RabbitMQ", "Docker", "Spring AI", "React.js", "Playwright", "WHOIS", "RDAP", "ICANN Zone Files"],
       features: [
@@ -88,7 +88,7 @@ const DATA = {
         "Autenticação com Google OAuth2",
         "Cache-aside com Redis",
         "Sugestões de domínios via LLM (Spring AI)",
-        "Notificações de expiração via RabbitMQ",
+        "Processamento em lote + notificação por email via RabbitMQ",
         "Arquitetura orientada a eventos"
       ],
       architecture: "Sistema distribuído baseado em Spring Boot, RabbitMQ e Redis, com arquitetura orientada a eventos.",
@@ -100,12 +100,12 @@ const DATA = {
       name: "Dragons Inquiry",
       exe: "Dragons Inquiry.exe",
       icon: '<img src="./assets/icons/Minesweeper.ico" style="width: 32px; height: 32px;">',
-      github: null, // preencher quando disponível
+      github: 'https://github.com/vitorncordeiro/DragonsInquiry', 
       demoUrl: null,
-      description: "Jogo de aventura em CLI desenvolvido em Java puro, com narrativa inspirada em jornadas épicas.",
+      description: "Jogo de aventura em CLI desenvolvido em Java puro, com narrativa em jornadas como 'A Odisseia', de Homero.",
       problem: "Projeto prático para dominar POO, lógica de programação e manipulação de I/O em Java.",
       solution: "Jogo de texto completo com sistema de save/load, trilha sonora e sistema de desafios — distribuível sem JDK.",
-      stack: ["Java"],
+      stack: ["Java", "POO", "I/O"],
       features: [
         "Interface CLI completa",
         "Sistema de save/load via I/O",

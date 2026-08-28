@@ -143,7 +143,12 @@ const Apps = (() => {
 
       <div class="content-section">
         <h3>Gameplay</h3>
-        ${videoBox(p.videoUrl, 'Demonstração do Dragons Inquiry')}
+        <video autoplay loop controls width="800">
+          <source 
+           src="./assets/videos/dragonsinquiry.webm"
+           type="video/webm"
+          Seu navegador não suporta vídeo WebM.
+        </video>
       </div>
 
       <div class="content-section">
@@ -224,6 +229,11 @@ const Apps = (() => {
     `;
   }
 
+
+  function buildJavaGif(){
+    return `
+    <div class="tenor-gif-embed" data-postid="2655662629958065522" data-share-method="host" data-aspect-ratio="1.5" data-width="100%"><img src="https://media1.tenor.com/m/JNrPF3XuHXIAAAAd/java-duke.gif"></div>`
+  }
   /* ─────────────────────────────────────────────────────────── */
   /*  ALADIN                                                     */
   /* ─────────────────────────────────────────────────────────── */
@@ -241,19 +251,6 @@ const Apps = (() => {
       <div class="content-section">
         <h3>Conceito</h3>
         <p>${p.description}</p>
-      </div>
-
-      <div class="content-section">
-        <h3>Fluxo</h3>
-        <div class="flow-diagram">
-          ${p.flow.map((step, i) => `
-            <div class="flow-step">
-              <div class="step-n">${i + 1}</div>
-              <div>${step}</div>
-            </div>
-            ${i < p.flow.length - 1 ? '<div class="flow-sep">│</div>' : ''}
-          `).join('')}
-        </div>
       </div>
 
       <div class="content-section">
@@ -401,12 +398,6 @@ const Apps = (() => {
         <p style="font-size: 13px;">Desenvolvedor Back-end Java com experiência em Spring Boot, microsserviços, RabbitMQ, Redis e Docker. Atualmente estagiário na Polícia Científica do Paraná. Graduando em Engenharia de Software (PUC-PR).</p>
       </div>
 
-      <div class="content-section">
-        <h3>Projetos em destaque</h3>
-        <ul>
-          ${d.projects.map(p => `<li style="font-size: 13px;margin-bottom:2px;"><strong>${p.name}</strong> — ${p.description.split('.')[0]}.</li>`).join('')}
-        </ul>
-      </div>
 
       <div style="text-align:center;margin-top:20px;padding:16px;border-top:1px solid var(--border-dark);">
         <p style="font-size: 13px;margin-bottom:12px;">O currículo completo está disponível em PDF:</p>
@@ -520,6 +511,7 @@ a3f1b2c fix: NullPointerException in prod
     buildPidgeyMail,
     buildAladin,
     buildJitor,
+    buildJavaGif,
     buildAbout,
     buildResume,
     buildContact,
