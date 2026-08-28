@@ -70,13 +70,6 @@ const StartMenu = (() => {
           <span>Contato</span>
         </div>
 
-        <div class="start-sep"></div>
-
-        <!-- Desligar -->
-        <div class="start-item" tabindex="0" role="menuitem" id="menu-shutdown">
-          <span class="start-item-icon"><img src="./assets/icons/User's Computer.ico"></span>
-          <span>Desligar...</span>
-        </div>
 
       </div>
     `;

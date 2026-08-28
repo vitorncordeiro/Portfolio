@@ -468,8 +468,7 @@ html, body {
   z-index: 9600;
   padding: 4px 0;
 }
-.start-item:hover .start-submenu,
-.start-item:focus-within .start-submenu { display: block; }
+.start-item:hover .start-submenu { display: block; }
 .start-submenu .start-item { padding: 3px 10px; font-size: 13px; }
 
 /* ─── Dialog / Modal ────────────────────────────────────────────── */

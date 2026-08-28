@@ -66,7 +66,6 @@ const DATA = {
     { name: "Deserto",           file: "assets/wallpapers/desert.jpeg" },
     { name: "Paisagem",          file: "assets/wallpapers/landscape.jpg" },
     { name: "Paisagem Noturna",  file: "assets/wallpapers/landscape-nigh.jpg" },
-    { name: "Linux & Windows",               file: "assets/wallpapers/linuxandwindows.jpg" },
     { name: "Céu",               file: "assets/wallpapers/sky.jpg" },
     { name: "Linux Kill Windows", file: "assets/wallpapers/linuxkillwindows.jpeg" }
   ],
